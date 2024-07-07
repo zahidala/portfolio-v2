@@ -26,7 +26,7 @@ export const Navbar = () => {
 				</NavbarBrand>
 			</NavbarContent>
 
-			<NavbarContent className="hidden lg:flex gap-8" justify="end">
+			<NavbarContent className="hidden md:flex gap-4 lg:gap-8" justify="end">
 				<NavbarItem>
 					<Link className="text-lg" color="foreground" href="#">
 						About
