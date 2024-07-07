@@ -7,7 +7,7 @@ export default function Home() {
 		<>
 			<Navbar />
 
-			<div className="p-10 md:p-20 flex flex-col" style={{ gap: "10rem" }}>
+			<div className="p-10 md:p-20 flex flex-col gap-10 md:gap-40">
 				<About />
 				<Experience />
 			</div>
