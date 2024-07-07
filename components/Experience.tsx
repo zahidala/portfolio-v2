@@ -36,7 +36,7 @@ export const Experience = () => {
 
 				<Divider />
 
-				<CardBody className="p-10">
+				<CardBody className="p-5 md:p-10">
 					<ul className="list-none list-inside gap-3 flex flex-col">
 						<li className="before:content-['-'] before:mr-2">
 							Developed and maintained the company's internal website.
