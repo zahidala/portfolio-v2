@@ -15,7 +15,7 @@ import { useState } from "react";
 export const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const menuItems = ["About", "Skills", "Projects", "Contact", "Resume"];
+	const menuItems = ["About", "Experience", "Projects", "Contact", "Resume"];
 
 	return (
 		<NextUINavbar maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
