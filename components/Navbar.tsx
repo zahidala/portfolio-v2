@@ -12,7 +12,13 @@ import {
 import { ThemeSwitcher } from ".";
 import { useState } from "react";
 
-export const Navbar = () => {
+interface NavbarProps {
+	activeSection: string;
+}
+
+export const Navbar = (props: NavbarProps) => {
+	const { activeSection } = props;
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const menuItems = ["About", "Experience", "Projects", "Contact", "Resume"];
@@ -27,26 +33,26 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent className="hidden md:flex gap-4 lg:gap-8" justify="end">
-				<NavbarItem>
-					<Link className="text-lg" color="foreground" href="#">
+				<NavbarItem isActive={activeSection === "About"}>
+					<Link className="text-lg" color={activeSection === "About" ? "primary" : "foreground"} href="#">
 						About
 					</Link>
 				</NavbarItem>
 
-				<NavbarItem>
-					<Link className="text-lg" color="foreground" href="#">
+				<NavbarItem isActive={activeSection === "Experience"}>
+					<Link className="text-lg" color={activeSection === "Experience" ? "primary" : "foreground"} href="#">
 						Experience
 					</Link>
 				</NavbarItem>
 
 				<NavbarItem>
-					<Link className="text-lg" color="foreground" href="#">
+					<Link className="text-lg" color={activeSection === "Projects" ? "primary" : "foreground"} href="#">
 						Projects
 					</Link>
 				</NavbarItem>
 
 				<NavbarItem>
-					<Link className="text-lg" color="foreground" href="#">
+					<Link className="text-lg" color={activeSection === "Contact" ? "primary" : "foreground"} href="#">
 						Contact
 					</Link>
 				</NavbarItem>
@@ -63,8 +69,8 @@ export const Navbar = () => {
 			</NavbarItem>
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
-					<NavbarMenuItem key={`${item}-${index}`}>
-						<Link className="w-full" href="#" size="lg">
+					<NavbarMenuItem key={`${item}-${index}`} isActive={activeSection === item}>
+						<Link className="w-full" color={activeSection === item ? "primary" : "foreground"} href="#">
 							{item}
 						</Link>
 					</NavbarMenuItem>
