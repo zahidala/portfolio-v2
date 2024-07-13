@@ -45,7 +45,7 @@ export const Navbar = (props: NavbarProps) => {
 					</Link>
 				</NavbarItem>
 
-				<NavbarItem>
+				<NavbarItem isActive={activeSection === "Projects"}>
 					<Link className="text-lg" color={activeSection === "Projects" ? "primary" : "foreground"} href="#">
 						Projects
 					</Link>

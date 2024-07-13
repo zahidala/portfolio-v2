@@ -19,13 +19,13 @@ export default function Home() {
 		} else if (projectsInView) {
 			setActiveSection("Projects");
 		}
-	}, [aboutInView, experienceInView]);
+	}, [aboutInView, experienceInView, projectsInView]);
 
 	return (
 		<>
 			<Navbar activeSection={activeSection} />
 
-			<div className="p-10 md:p-20 flex flex-col gap-10 md:gap-40">
+			<div className="p-10 md:p-20 lg:p-40 flex flex-col gap-10 md:gap-40">
 				<div ref={aboutRef} id="about">
 					<About />
 				</div>
