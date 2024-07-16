@@ -14,14 +14,15 @@ import { useState } from "react";
 
 interface NavbarProps {
 	activeSection: string;
+	handleSectionClick: (section: string) => void;
 }
 
 export const Navbar = (props: NavbarProps) => {
-	const { activeSection } = props;
+	const { activeSection, handleSectionClick } = props;
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const menuItems = ["About", "Experience", "Projects", "Contact", "Resume"];
+	const menuItems = ["About", "Experience", "Projects", "Resume"];
 
 	return (
 		<NextUINavbar maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
@@ -33,29 +34,23 @@ export const Navbar = (props: NavbarProps) => {
 			</NavbarContent>
 
 			<NavbarContent className="hidden md:flex gap-4 lg:gap-8" justify="end">
-				<NavbarItem isActive={activeSection === "About"}>
-					<Link className="text-lg" color={activeSection === "About" ? "primary" : "foreground"} href="#">
-						About
-					</Link>
-				</NavbarItem>
-
-				<NavbarItem isActive={activeSection === "Experience"}>
-					<Link className="text-lg" color={activeSection === "Experience" ? "primary" : "foreground"} href="#">
-						Experience
-					</Link>
-				</NavbarItem>
-
-				<NavbarItem isActive={activeSection === "Projects"}>
-					<Link className="text-lg" color={activeSection === "Projects" ? "primary" : "foreground"} href="#">
-						Projects
-					</Link>
-				</NavbarItem>
-
-				<NavbarItem>
-					<Link className="text-lg" color={activeSection === "Contact" ? "primary" : "foreground"} href="#">
-						Contact
-					</Link>
-				</NavbarItem>
+				{menuItems
+					.filter(item => item !== "Resume")
+					.map((item, index) => (
+						<NavbarItem
+							key={`${item}-${index}`}
+							isActive={activeSection === item}
+							onClick={() => handleSectionClick(item)}
+						>
+							<Link
+								className="text-lg"
+								color={activeSection === item ? "primary" : "foreground"}
+								href={`#${item.toLowerCase()}`}
+							>
+								{item}
+							</Link>
+						</NavbarItem>
+					))}
 
 				<NavbarItem>
 					<Button as={Link} color="primary" href="#" variant="flat">

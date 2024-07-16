@@ -21,9 +21,17 @@ export default function Home() {
 		}
 	}, [aboutInView, experienceInView, projectsInView]);
 
+	const handleSectionClick = (section: string) => {
+		const sectionId = section.toLowerCase();
+		const sectionElement = document.getElementById(sectionId);
+		if (sectionElement) {
+			sectionElement.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
 	return (
 		<>
-			<Navbar activeSection={activeSection} />
+			<Navbar activeSection={activeSection} handleSectionClick={handleSectionClick} />
 
 			<div className="p-10 md:p-20 lg:p-40 flex flex-col gap-10 md:gap-40">
 				<div ref={aboutRef} id="about">

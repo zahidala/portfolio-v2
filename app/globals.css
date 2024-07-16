@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 
 .blinking-cursor {
   display: inline-block;
@@ -10,6 +13,14 @@
   height: 0.8em;
   background-color: currentColor;
   animation: blink 1s step-end infinite;
+}
+
+#experience {
+  scroll-margin-top: 70px;
+}
+
+#projects {
+  scroll-margin-top: 70px;
 }
 
 @keyframes blink {
