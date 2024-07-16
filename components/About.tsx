@@ -52,12 +52,12 @@ export const About = () => {
 	return (
 		<div className="flex flex-col lg:flex-row gap-8">
 			<div className="flex flex-col gap-10 flex-1">
-				<h1 className="text-2xl lg:text-4xl font-extralight">
+				<h1 className="text-2xl lg:text-3xl font-extralight">
 					{currentText}
 					<span className="blinking-cursor" />
 				</h1>
 
-				<p className="text-lg md:text-xl lg:text-2xl font-extralight">
+				<p className="text-md md:text-md lg:text-lg font-extralight">
 					I'm a passionate Full Stack Developer with a strong understanding of diverse technologies. I thrive on
 					tackling new and complex challenges, diligently solving problems with a relentless drive for learning. With an
 					unwavering love for technology, I am dedicated to staying ahead of the curve and continuously expanding my
