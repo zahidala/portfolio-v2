@@ -19,7 +19,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 	return (
 		<>
 			<Card
-				className="flex-1 p-5 space-y-5 hover:text-foreground-600"
+				className="flex-1 p-5 space-y-5 hover:text-primary-500"
 				radius="lg"
 				isHoverable
 				isPressable
@@ -27,7 +27,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 			>
 				<CardHeader className="flex p-0 justify-between">
 					<span className="font-bold text-md">{heading}</span>
-					<FaExternalLinkAlt />
+					<FaExternalLinkAlt size={12} />
 				</CardHeader>
 
 				<Image alt={heading} className="object-cover aspect-square min-h-[200px] rounded-xl shadow-xl" src={imgSrc} />
