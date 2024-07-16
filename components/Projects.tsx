@@ -1,5 +1,6 @@
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
+import { GeneralAssemblySVG } from "./projects/GeneralAssemblySVG";
 import { ProjectCard } from "./projects/ProjectCard";
 import { SiBootstrap, SiDjango, SiExpress, SiMongodb, SiPython, SiReact } from "react-icons/si";
 import { Tab, Tabs } from "@nextui-org/tabs";
@@ -16,7 +17,14 @@ export const Projects = () => {
 					}}
 					variant="underlined"
 				>
-					<Tab title="General Assembly">
+					<Tab
+						title={
+							<div className="flex justify-between gap-2">
+								<GeneralAssemblySVG className="w-5 h-5" />
+								<span>General Assembly</span>
+							</div>
+						}
+					>
 						<div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row p-5 gap-6">
 							<ProjectCard
 								chips={[
@@ -72,7 +80,14 @@ export const Projects = () => {
 						</div>
 					</Tab>
 
-					<Tab title="Reboot01">
+					<Tab
+						title={
+							<div className="flex justify-between gap-2">
+								<img alt="Reboot01 Logo" className="w-5 h-5" src="/reboot01.png" />
+								<span>Reboot01</span>
+							</div>
+						}
+					>
 						<p>Work Projects</p>
 					</Tab>
 				</Tabs>
