@@ -4,7 +4,9 @@ import { NextUIProvider } from "./NextUIProvider";
 export const Providers = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<NextUIProvider>
-			<NextThemesProvider attribute="class">{children}</NextThemesProvider>
+			<NextThemesProvider attribute="class" enableSystem>
+				{children}
+			</NextThemesProvider>
 		</NextUIProvider>
 	);
 };
