@@ -14,11 +14,10 @@ import { useState } from "react";
 
 interface NavbarProps {
 	activeSection: string;
-	handleSectionClick: (section: string) => void;
 }
 
 export const Navbar = (props: NavbarProps) => {
-	const { activeSection, handleSectionClick } = props;
+	const { activeSection } = props;
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -40,7 +39,7 @@ export const Navbar = (props: NavbarProps) => {
 						<NavbarItem
 							key={`${item}-${index}`}
 							isActive={activeSection === item}
-							onClick={() => handleSectionClick(item)}
+							onClick={() => document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: "smooth" })}
 						>
 							<Link
 								className="text-lg"
