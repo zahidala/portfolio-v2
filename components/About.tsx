@@ -2,6 +2,7 @@ import "../app/globals.css";
 import { Button, Image } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export const About = () => {
 	const [isLoading, setLoading] = useState(true);
@@ -65,15 +66,15 @@ export const About = () => {
 				</p>
 
 				<div className="flex items-center flex-1 gap-4">
-					<Button isIconOnly>
+					<Button as={Link} href="https://www.linkedin.com/in/zahidallaulddin/" target="_blank" isIconOnly>
 						<i className="fa-brands fa-linkedin fa-xl"></i>
 					</Button>
 
-					<Button isIconOnly>
+					<Button as={Link} href="https://www.github.com/zahidala" target="_blank" isIconOnly>
 						<i className="fa-brands fa-github fa-xl"></i>
 					</Button>
 
-					<Button isIconOnly>
+					<Button as={Link} href="mailto:zahidallaulddin@gmail.com" target="_blank" isIconOnly>
 						<i className="fa-solid fa-envelope fa-xl"></i>
 					</Button>
 
