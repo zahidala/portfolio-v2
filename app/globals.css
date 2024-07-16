@@ -15,6 +15,10 @@ html {
   animation: blink 1s step-end infinite;
 }
 
+#about {
+  scroll-margin-top: 200px;
+}
+
 #experience {
   scroll-margin-top: 70px;
 }
