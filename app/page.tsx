@@ -1,6 +1,6 @@
 "use client";
 
-import { About, Experience, Navbar, Projects } from "@/components";
+import { About, Experience, Footer, Navbar, Projects } from "@/components";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -38,6 +38,8 @@ export default function Home() {
 					<Projects />
 				</div>
 			</div>
+
+			<Footer />
 		</>
 	);
 }
