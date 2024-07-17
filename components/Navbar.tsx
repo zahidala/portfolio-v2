@@ -24,7 +24,7 @@ export const Navbar = (props: NavbarProps) => {
 	const menuItems = ["About", "Experience", "Projects", "Resume"];
 
 	return (
-		<NextUINavbar maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
+		<NextUINavbar isMenuOpen={isMenuOpen} maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
 			<NavbarContent>
 				<NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
 				<NavbarBrand>
@@ -61,10 +61,16 @@ export const Navbar = (props: NavbarProps) => {
 			<NavbarItem>
 				<ThemeSwitcher />
 			</NavbarItem>
+
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem key={`${item}-${index}`} isActive={activeSection === item}>
-						<Link className="w-full" color={activeSection === item ? "primary" : "foreground"} href="#">
+						<Link
+							className="w-full"
+							color={activeSection === item ? "primary" : "foreground"}
+							href={`#${item.toLowerCase()}`}
+							onClick={() => setIsMenuOpen(false)}
+						>
 							{item}
 						</Link>
 					</NavbarMenuItem>
