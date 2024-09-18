@@ -19,7 +19,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 	return (
 		<>
 			<Card
-				className="flex-1 p-5 space-y-5 hover:text-primary-500"
+				className="flex-1 p-5 space-y-5 hover:text-primary-500 max-w-xs max-h-96"
 				radius="lg"
 				isHoverable
 				isPressable

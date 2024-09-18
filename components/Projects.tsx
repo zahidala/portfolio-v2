@@ -2,7 +2,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaNodeJs } from "react-icons/fa";
 import { GeneralAssemblySVG } from "./projects/GeneralAssemblySVG";
 import { ProjectCard } from "./projects/ProjectCard";
-import { SiBootstrap, SiDjango, SiExpress, SiMongodb, SiPython, SiReact } from "react-icons/si";
+import { SiBootstrap, SiDjango, SiExpress, SiMongodb, SiPython, SiReact, SiSqlite } from "react-icons/si";
 import { Tab, Tabs } from "@nextui-org/tabs";
 
 export const Projects = () => {
@@ -88,7 +88,39 @@ export const Projects = () => {
 							</div>
 						}
 					>
-						<p>Work Projects</p>
+						<div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row p-5 gap-6">
+							<ProjectCard
+								chips={[
+									{ icon: <i className="fa-brands fa-html5"></i>, title: "HTML" },
+									{ icon: <i className="fa-brands fa-css3-alt"></i>, title: "CSS" },
+									{ icon: <i className="fa-brands fa-js"></i>, title: "JavaScript" },
+									{ icon: <i className="fa-brands fa-golang"></i>, title: "Golang" },
+									{ icon: <i className="fa-brands fa-aws"></i>, title: "AWS" },
+								]}
+								demoLink="https://groupie-tracker.zahidallaulddin.com/"
+								description="A website that allows users to view or search for artists being populated from API provided by Reboot01 and view their upcoming or past events."
+								githubLink="https://github.com/zahidala/groupie-tracker"
+								heading="Groupie Tracker"
+								imgSrc="https://i.ibb.co/fN3WhYH/Groupie-Tracker-Artists-1.png"
+							/>
+
+							<ProjectCard
+								chips={[
+									{ icon: <i className="fa-brands fa-html5"></i>, title: "HTML" },
+									{ icon: <i className="fa-brands fa-css3-alt"></i>, title: "CSS" },
+									{ icon: <i className="fa-brands fa-js"></i>, title: "JavaScript" },
+									{ icon: <i className="fa-brands fa-golang"></i>, title: "Golang" },
+									{ icon: <SiSqlite size={15} />, title: "SQLite" },
+									{ icon: <i className="fa-brands fa-docker"></i>, title: "Docker" },
+									{ icon: <i className="fa-brands fa-aws"></i>, title: "AWS" },
+								]}
+								demoLink="https://car-forum.zahidallaulddin.com/"
+								description="An application that allows users to view, create, and like or dislike posts and comment on those posts with same reaction features as post on a forum website for car enthusiasts."
+								githubLink="https://github.com/zahidala/forum"
+								heading="Car Forum"
+								imgSrc="https://i.ibb.co/5YdDfmx/Car-Forum.png"
+							/>
+						</div>
 					</Tab>
 				</Tabs>
 			</div>
