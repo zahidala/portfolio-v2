@@ -52,7 +52,13 @@ export const Navbar = (props: NavbarProps) => {
 					))}
 
 				<NavbarItem>
-					<Button as={Link} color="primary" href="#" variant="flat">
+					<Button
+						as={Link}
+						color="primary"
+						href="https://zahids-portfolio.s3.amazonaws.com/ZahidAllaulddinCV.pdf"
+						target="_blank"
+						variant="flat"
+					>
 						Resume
 					</Button>
 				</NavbarItem>
@@ -68,7 +74,12 @@ export const Navbar = (props: NavbarProps) => {
 						<Link
 							className="w-full"
 							color={activeSection === item ? "primary" : "foreground"}
-							href={`#${item.toLowerCase()}`}
+							href={
+								item !== "Resume"
+									? `#${item.toLowerCase()}`
+									: "https://zahids-portfolio.s3.amazonaws.com/ZahidAllaulddinCV.pdf"
+							}
+							target={item === "Resume" ? "_blank" : undefined}
 							onClick={() => setIsMenuOpen(false)}
 						>
 							{item}
