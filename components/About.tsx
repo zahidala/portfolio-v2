@@ -89,7 +89,14 @@ export const About = () => {
 						}}
 					/>
 
-					<Button color="primary" size="lg" variant="solid">
+					<Button
+						as={Link}
+						color="primary"
+						href="https://zahids-portfolio.s3.amazonaws.com/ZahidAllaulddinCV.pdf"
+						size="lg"
+						target="_blank"
+						variant="solid"
+					>
 						Resume
 					</Button>
 				</div>
