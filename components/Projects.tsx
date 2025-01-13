@@ -120,6 +120,21 @@ export const Projects = () => {
 								heading="Car Forum"
 								imgSrc="https://i.ibb.co/5YdDfmx/Car-Forum.png"
 							/>
+
+							<ProjectCard
+								chips={[
+									{ icon: <i className="fa-brands fa-html5"></i>, title: "HTML" },
+									{ icon: <i className="fa-brands fa-css3-alt"></i>, title: "CSS" },
+									{ icon: <i className="fa-brands fa-js"></i>, title: "JavaScript" },
+									{ icon: <i className="fa-brands fa-golang"></i>, title: "Golang" },
+									{ icon: <i className="fa-brands fa-aws"></i>, title: "AWS" },
+								]}
+								demoLink="https://tetris.zahidallaulddin.com/"
+								description="A game of Tetris where users can play the original game with the almost same rules and features as the original game. Additionally, a lives system is added to the game."
+								githubLink="https://github.com/zahidala/make-your-game"
+								heading="Tetris"
+								imgSrc="https://i.ibb.co/6v1BW8t/TETRIS-01-13-2025-12-29-PM.png"
+							/>
 						</div>
 					</Tab>
 				</Tabs>
