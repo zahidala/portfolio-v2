@@ -88,7 +88,7 @@ export const Projects = () => {
 							</div>
 						}
 					>
-						<div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row p-5 gap-6">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-5 gap-6">
 							<ProjectCard
 								chips={[
 									{ icon: <i className="fa-brands fa-html5"></i>, title: "HTML" },
